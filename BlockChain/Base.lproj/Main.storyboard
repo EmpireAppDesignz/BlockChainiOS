@@ -1,24 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uuS-1G-akZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Bitcoin (BTC) Wallet-->
+        <scene sceneID="3JM-pN-U7R">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="OuV-z1-c1D" customClass="ViewController" customModule="Blockchain_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UAc-os-JwL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Wallet #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYn-Br-Btj">
+                                <rect key="frame" x="15.5" y="124" width="344" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="VKd-UN-8Vh"/>
+                                    <constraint firstAttribute="height" constant="36" id="zyD-4L-0ai"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.81062704320000001" green="0.21943971509999999" blue="0.21108013389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account: 0021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl1-bj-wg9">
+                                <rect key="frame" x="16" y="164" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WcK-Pw-7Xb"/>
+                                    <constraint firstAttribute="width" constant="130" id="v9v-cn-2bJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: 5000 BTC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-7j-8JR">
+                                <rect key="frame" x="154" y="164" width="194" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hEI-TG-EZT"/>
+                                    <constraint firstAttribute="width" constant="194" id="sxc-Gq-3G6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-b5-tMr">
+                                <rect key="frame" x="132.5" y="193" width="110" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coins to send" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OVC-Jz-peT">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Ltu-m9-hu5"/>
+                                    <constraint firstAttribute="height" constant="30" id="pBz-NR-VTg"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5F-w4-ie1">
+                                <rect key="frame" x="63" y="231" width="249" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-TW-Avg" customClass="CustomButton" customModule="Blockchain_Final_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="aEm-yj-OeI"/>
+                                            <constraint firstAttribute="height" constant="80" id="sGU-iL-y24"/>
+                                        </constraints>
+                                        <state key="normal" image="minebtc">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="redMine:" destination="OuV-z1-c1D" eventType="touchUpInside" id="G26-NW-DtV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-FB-Eql" customClass="CustomButton" customModule="Blockchain_Final_Project" customModuleProvider="target">
+                                        <rect key="frame" x="169" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Ugf-vE-uwb"/>
+                                            <constraint firstAttribute="width" constant="80" id="rsq-rk-PRg"/>
+                                        </constraints>
+                                        <state key="normal" image="sendbtc">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="redSend:" destination="OuV-z1-c1D" eventType="touchUpInside" id="x5U-P8-7yd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kap-TW-Avg" firstAttribute="leading" secondItem="z5F-w4-ie1" secondAttribute="leading" id="10x-Gw-oYu"/>
+                                    <constraint firstAttribute="trailing" secondItem="r6M-FB-Eql" secondAttribute="trailing" id="1Dd-2R-oGu"/>
+                                    <constraint firstAttribute="width" constant="249" id="6V4-Ya-deg"/>
+                                    <constraint firstItem="r6M-FB-Eql" firstAttribute="top" secondItem="z5F-w4-ie1" secondAttribute="top" id="EjO-gP-P1B"/>
+                                    <constraint firstItem="Kap-TW-Avg" firstAttribute="top" secondItem="z5F-w4-ie1" secondAttribute="top" id="leK-9O-AnM"/>
+                                    <constraint firstAttribute="height" constant="80" id="wQv-fq-c43"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin Wallet #2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTx-0n-R1F">
+                                <rect key="frame" x="15.5" y="344" width="344" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="A8B-BD-lgU"/>
+                                    <constraint firstAttribute="height" constant="36" id="Kkl-6m-cdX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.1177216843" green="0.38684132700000001" blue="0.93562549350000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-LB-IfV">
+                                <rect key="frame" x="132.5" y="433" width="110" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coins to send" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adq-ia-qX3">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="81i-ku-AVw"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qay-YJ-DVI"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account: 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxG-iz-0ZR">
+                                <rect key="frame" x="16" y="388" width="109.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Mxv-oQ-1qd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: 0 BTC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za7-hd-7o7">
+                                <rect key="frame" x="133.5" y="388" width="203" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="203" id="O8U-fS-YsG"/>
+                                    <constraint firstAttribute="height" constant="21" id="wEC-dN-I6n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4y-TS-bke">
+                                <rect key="frame" x="64.5" y="471" width="246" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfF-lI-5uN" customClass="CustomButton" customModule="Blockchain_Final_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="2XM-G3-Sl5"/>
+                                            <constraint firstAttribute="width" constant="80" id="Gg3-Qh-VhY"/>
+                                        </constraints>
+                                        <state key="normal" image="minebtc">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="blueMine:" destination="OuV-z1-c1D" eventType="touchUpInside" id="Tbz-Yz-SaV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX6-vp-UZr" customClass="CustomButton" customModule="Blockchain_Final_Project" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="RiZ-zp-SGc"/>
+                                            <constraint firstAttribute="height" constant="80" id="eQ4-Wt-pPP"/>
+                                        </constraints>
+                                        <state key="normal" image="sendbtc">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="blueSend:" destination="OuV-z1-c1D" eventType="touchUpInside" id="Ija-SP-beX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7ym-Q1-w4R"/>
+                                    <constraint firstAttribute="trailing" secondItem="QX6-vp-UZr" secondAttribute="trailing" id="9uf-va-gol"/>
+                                    <constraint firstAttribute="width" constant="246" id="WBH-Bs-mpK"/>
+                                    <constraint firstItem="nfF-lI-5uN" firstAttribute="top" secondItem="E4y-TS-bke" secondAttribute="top" id="fKw-JF-T3S"/>
+                                    <constraint firstItem="nfF-lI-5uN" firstAttribute="leading" secondItem="E4y-TS-bke" secondAttribute="leading" id="ucL-mV-lNv"/>
+                                    <constraint firstItem="QX6-vp-UZr" firstAttribute="top" secondItem="E4y-TS-bke" secondAttribute="top" id="y6e-Z2-wFn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NhG-b5-tMr" firstAttribute="top" secondItem="vl1-bj-wg9" secondAttribute="bottom" constant="8" id="50Q-5d-WPf"/>
+                            <constraint firstItem="za7-hd-7o7" firstAttribute="top" secondItem="jTx-0n-R1F" secondAttribute="bottom" constant="8" id="B2X-i0-Me6"/>
+                            <constraint firstItem="SxG-iz-0ZR" firstAttribute="top" secondItem="jTx-0n-R1F" secondAttribute="bottom" constant="8" id="CH7-tm-pwh"/>
+                            <constraint firstItem="SxG-iz-0ZR" firstAttribute="leading" secondItem="aLA-Cp-CAd" secondAttribute="leading" constant="16" id="Ct3-pH-jUc"/>
+                            <constraint firstItem="yYn-Br-Btj" firstAttribute="top" secondItem="aLA-Cp-CAd" secondAttribute="top" constant="8" id="Dho-vi-MOo"/>
+                            <constraint firstItem="aLA-Cp-CAd" firstAttribute="bottom" secondItem="E4y-TS-bke" secondAttribute="bottom" constant="116" id="FI8-4a-nJZ"/>
+                            <constraint firstItem="vl1-bj-wg9" firstAttribute="leading" secondItem="aLA-Cp-CAd" secondAttribute="leading" constant="16" id="GFl-l2-epi"/>
+                            <constraint firstItem="E4y-TS-bke" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="HRp-Jk-Tyb"/>
+                            <constraint firstItem="JMm-7j-8JR" firstAttribute="top" secondItem="yYn-Br-Btj" secondAttribute="bottom" constant="4" id="KeZ-Ey-fWN"/>
+                            <constraint firstItem="jTx-0n-R1F" firstAttribute="top" secondItem="z5F-w4-ie1" secondAttribute="bottom" constant="33" id="PNP-BR-9kw"/>
+                            <constraint firstItem="jTx-0n-R1F" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="V3W-Ee-epW"/>
+                            <constraint firstItem="NhG-b5-tMr" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="Vgw-lt-4Mn"/>
+                            <constraint firstItem="z5F-w4-ie1" firstAttribute="top" secondItem="NhG-b5-tMr" secondAttribute="bottom" constant="8" id="YuG-rP-bwy"/>
+                            <constraint firstItem="z5F-w4-ie1" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="Z0H-xP-mbV"/>
+                            <constraint firstItem="JMm-7j-8JR" firstAttribute="leading" secondItem="vl1-bj-wg9" secondAttribute="trailing" constant="8" id="cRs-hg-8p2"/>
+                            <constraint firstItem="vl1-bj-wg9" firstAttribute="top" secondItem="yYn-Br-Btj" secondAttribute="bottom" constant="4" id="gFO-Wq-Fdr"/>
+                            <constraint firstItem="E4y-TS-bke" firstAttribute="top" secondItem="lxs-LB-IfV" secondAttribute="bottom" constant="8" id="hD4-CK-Fzu"/>
+                            <constraint firstItem="za7-hd-7o7" firstAttribute="leading" secondItem="SxG-iz-0ZR" secondAttribute="trailing" constant="8" id="my8-G2-wtW"/>
+                            <constraint firstItem="lxs-LB-IfV" firstAttribute="top" secondItem="SxG-iz-0ZR" secondAttribute="bottom" constant="24" id="vBo-ha-JkN"/>
+                            <constraint firstItem="lxs-LB-IfV" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="yrP-J8-8lV"/>
+                            <constraint firstItem="yYn-Br-Btj" firstAttribute="centerX" secondItem="UAc-os-JwL" secondAttribute="centerX" id="zrI-1d-HO6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aLA-Cp-CAd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Bitcoin (BTC) Wallet" id="Cxh-iA-G0C"/>
+                    <connections>
+                        <outlet property="blueAmount" destination="Adq-ia-qX3" id="p8D-gW-nVN"/>
+                        <outlet property="blueLabel" destination="za7-hd-7o7" id="Q7y-B9-chM"/>
+                        <outlet property="redAmount" destination="OVC-Jz-peT" id="I6i-rH-9nn"/>
+                        <outlet property="redLabel" destination="JMm-7j-8JR" id="kKq-df-8WC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aae-tU-Fym" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="560.79999999999995" y="-88.605697151424295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XT9-yo-qv7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uuS-1G-akZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qi3-wG-b1E">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OuV-z1-c1D" kind="relationship" relationship="rootViewController" id="Wvo-gC-Hd5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PcA-36-Mmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-88"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minebtc" width="80" height="80"/>
+        <image name="sendbtc" width="80" height="80"/>
+    </resources>
 </document>
